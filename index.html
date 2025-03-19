@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Calendario Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">📅 Calendario Interactivo</h1>
+        <div class="calendar">
+            <div class="calendar__info">
+                <button class="calendar__prev" id="prev-month">◀</button>
+                <div class="calendar__month" id="month">Enero</div>
+                <div class="calendar__year" id="year">2025</div>
+                <button class="calendar__next" id="next-month">▶</button>
+            </div>
+            <div class="calendar-week">
+                <div class="calendar__day">Lun</div>
+                <div class="calendar__day">Mar</div>
+                <div class="calendar__day">Mié</div>
+                <div class="calendar__day">Jue</div>
+                <div class="calendar__day">Vie</div>
+                <div class="calendar__day">Sáb</div>
+                <div class="calendar__day">Dom</div>
+            </div>
+            <div class="calendar__dates" id="dates">
+                </div>
+        </div>
+
+        <div id="noteModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeNoteModal">&times;</span>
+                <h2><span id="noteDate"></span></h2>
+                <textarea id="noteText" rows="5" placeholder="Ingrese su nota aquí..."></textarea>
+                <button id="saveNote">Guardar Evento</button>
+                <button id="deleteNote" style="background-color: #f44336; color: white; border: none; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 10px 2px; cursor: pointer; border-radius: 5px; display: none;">Eliminar Nota</button>
+            </div>
+        </div>
+
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModalInfo()" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <img id="modalImage" src="" alt="Imagen del evento" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 4px;">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
